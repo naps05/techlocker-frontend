@@ -1,1 +1,40 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: 'DM Sans', sans-serif;
+}
+
+body {
+  background: #0a0a0f;
+  color: #fff;
+  transition: background 0.3s, color 0.3s;
+}
+
+body.light-mode {
+  background: #f0f0f5;
+  color: #111;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animated-bg {
+  background: linear-gradient(-45deg, #0a0a0f, #1a0010, #0a0a2e, #1a000a, #0d001a);
+  background-size: 400% 400%;
+  animation: gradientShift 8s ease infinite;
+}
+
+body.light-mode .animated-bg {
+  background: linear-gradient(-45deg, #ffe0e0, #e0e0ff, #ffd6d6, #d6d6ff, #ffe8e8);
+  background-size: 400% 400%;
+  animation: gradientShift 8s ease infinite;
+}
