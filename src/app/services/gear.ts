@@ -13,7 +13,7 @@ export interface Gear {
 
 @Injectable({ providedIn: 'root' })
 export class GearService {
-  private apiUrl = 'http://localhost:3000/api/gear';
+  private apiUrl = 'https://techlocker-backend.onrender.com/api/gear';
 
   constructor(private http: HttpClient) {}
 

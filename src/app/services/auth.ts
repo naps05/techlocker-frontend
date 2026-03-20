@@ -13,7 +13,7 @@ export interface User {
 export class AuthService {
   private readonly TOKEN_KEY = 'techlocker_token';
   private readonly USER_KEY = 'techlocker_user';
-  private apiUrl = 'http://localhost:3000/api/auth';
+  private apiUrl = 'https://techlocker-backend.onrender.com/api/auth';
 
   currentUser = signal<User | null>(this.getStoredUser());
 
